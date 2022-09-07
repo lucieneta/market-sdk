@@ -11,6 +11,7 @@ export * from "./lib/Comptroller";
 export * from "./lib/CToken";
 export * from "./lib/MarketLens";
 export * from "./lib/MarketSDK";
+export * from "./lib/RewardsDistributor";
 
 export * from "./utils/errors";
 
