@@ -255,3 +255,5 @@ class RewardsDistributor extends MarketContract<RewardsDistributorWeb3Interface>
     return this.contract.methods.updateContributorRewards(contributor).send(tx);
   }
 }
+
+export { RewardsDistributor };
