@@ -16,7 +16,7 @@ class RewardsDistributor extends MarketContract<RewardsDistributorWeb3Interface>
     super(sdk, address, RewardsDistrbutorArtifact.abi);
   }
 
-  _accetpAdmin(
+  _acceptAdmin(
     tx?: NonPayableTx
   ): PromiEvent<TransactionReceipt> {
     return this.contract.methods._acceptAdmin().send(tx);
@@ -76,7 +76,7 @@ class RewardsDistributor extends MarketContract<RewardsDistributorWeb3Interface>
   admin(
     tx?: NonPayableTx
   ): Promise<string> {
-    return this.contract.methods.admin().call();
+    return this.contract.methods.admin().call(tx);
   }
 
   async allMarkets(
@@ -117,21 +117,21 @@ class RewardsDistributor extends MarketContract<RewardsDistributorWeb3Interface>
     arg0: string,
     tx?: NonPayableTx
   ): Promise<string> {
-    return this.contract.methods.compAccrued(arg0).call(tx)
+    return this.contract.methods.compAccrued(arg0).call(tx);
   }
 
   compBorrowSpeeds(
     arg0: string,
     tx?: NonPayableTx
   ): Promise<string> {
-    return this.contract.methods.compBorrowSpeeds(arg0).call(tx)
+    return this.contract.methods.compBorrowSpeeds(arg0).call(tx);
   }
 
   compBorrowState(
     arg0: string,
     tx?: NonPayableTx
   ): Promise<{ index: string, block: string }> {
-    return this.contract.methods.compBorrowState(arg0).call(tx)
+    return this.contract.methods.compBorrowState(arg0).call(tx);
   }
 
   compBorrowIndex(
